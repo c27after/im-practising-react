@@ -1,0 +1,36 @@
+.Meal{
+  border-bottom: 1px solid #eee;
+  display: flex;
+  margin: 20rem ;
+  align-items: center;
+}
+.MealImg {
+  width: 280rem;
+}
+img{
+  width: 100%;
+}
+
+.Title{
+  font-size: 30rem;
+  font-weight: bold;
+  margin: 0;
+}
+.Desc{
+  color: #bbb;
+  width: 95%;
+}
+.ActionBox{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rem;
+  align-items: center;
+}
+.Price{
+  font-weight: bold;
+  font-size: 30rem;
+}
+.MoneyIcon{
+  font-size: 24rem;
+  font-weight: bold;
+}
