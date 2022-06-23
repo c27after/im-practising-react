@@ -1,0 +1,37 @@
+.DetailsBox{
+  background: #Fff;
+  position: absolute;
+  bottom: 0rem;
+  width: 100%;
+  min-height: 1000rem;
+  padding-bottom: 200rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rem;
+}
+.top h2{
+  font-size: 27rem;
+  margin: 0;
+  font-weight: bold;
+}
+.icon{
+  width: 30rem;
+  height: 30rem;
+}
+.Actionbox{
+  display: flex;
+  align-items: center;
+}
+
+.Actionbox button{
+  border: none;
+  margin-left: 5px;
+}
+.meallist{
+ overflow: auto;
+}

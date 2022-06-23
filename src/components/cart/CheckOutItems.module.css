@@ -1,0 +1,32 @@
+.CheckOutItem {
+  display: flex;
+  align-items: center;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 170rem;
+}
+.detail .itemName {
+  font-weight: bold;
+  font-size: 30rem;
+}
+.ActionBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CheckOutItem img {
+  width: 170rem;
+  height: 170rem;
+}
+.ItemPrice {
+  font-weight: bold;
+  font-size: 25rem;
+  margin-right: 20rem;
+}
+.ItemPrice::before {
+  content: '￥';
+  font-weight: normal;
+}

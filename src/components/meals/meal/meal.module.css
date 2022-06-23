@@ -34,3 +34,6 @@ img{
   font-size: 24rem;
   font-weight: bold;
 }
+.DescBox{
+  flex: auto;
+}

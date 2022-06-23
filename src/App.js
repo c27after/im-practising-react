@@ -87,33 +87,48 @@ const App = () => {
     setCartData(newCart)
   }
 
-  const subMealHandler=(meal)=>{
+  const subMealHandler = (meal) => {
     const newCart = { ...cartData }
-    meal.amount-=1
+    meal.amount -= 1
     //检查是否归零
-    if(meal.amount===0){
-      newCart.items.splice(newCart.items.indexOf(meal),1)
+    if (meal.amount === 0) {
+      newCart.items.splice(newCart.items.indexOf(meal), 1)
     }
 
     newCart.totalAmount -= 1
-    newCart.totalPrice =newCart.totalPrice- meal.price 
+    newCart.totalPrice = newCart.totalPrice - meal.price
     setCartData(newCart)
   }
 
-  const filterHandler=(keyword)=>{
-    const New_MEALS_DATA=MEALS_DATA.filter(item=>item.title.indexOf(keyword)!==-1)
+  const filterHandler = (keyword) => {
+    const New_MEALS_DATA = MEALS_DATA.filter(
+      (item) => item.title.indexOf(keyword) !== -1
+    )
     setMealsData(New_MEALS_DATA)
   }
 
+  const clearHandler = () => {
+    const newCart = { ...cartData }
+    newCart.items.forEach((item) => {
+      delete item.amount
+    })
+    newCart.items=[]
+    newCart.totalAmount=0
+    newCart.totalPrice=0
+    setCartData(newCart)
+
+  }
+
   return (
-   <CartContext.Provider value={{...cartData,subMealHandler,addMealHandler}}>
-     <div>
-      <FilterMeals onFilter={filterHandler}></FilterMeals>
-      <Meals mealsData={mealsData} />
-    </div>
-    <Cart cartData={cartData}></Cart>
-    
-   </CartContext.Provider>
+    <CartContext.Provider
+      value={{ ...cartData, subMealHandler, addMealHandler, clearHandler }}
+    >
+      <div>
+        <FilterMeals onFilter={filterHandler}></FilterMeals>
+        <Meals mealsData={mealsData} />
+      </div>
+      <Cart cartData={cartData}></Cart>
+    </CartContext.Provider>
   )
 }
 

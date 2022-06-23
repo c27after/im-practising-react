@@ -1,0 +1,33 @@
+.ConfirmBackdrop{
+  z-index: 999999;
+}
+
+.Comfirm{
+  width: 600rem;
+  height: 300rem;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.ComfirmText{
+  font-size: 38rem;
+}
+.cancel,.ok{
+  border: none;
+  width: 170rem;
+  height: 70rem;
+  border-radius: 20px;
+}
+.ok{
+  background-color: #FCBF49;
+  margin-left: 30rem;
+}
